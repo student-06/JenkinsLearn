@@ -14,6 +14,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo hello pnr"
+                sh "created dev!"
             }
         }
     }

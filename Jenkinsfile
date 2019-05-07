@@ -3,10 +3,15 @@ pipeline {
 
     stages {
 
+        environment{
+        IS_GENERATE=params.isGenerate
+        }
+        
         stage('build') {
             steps {
                 echo "hello"
-                params.isGenerate ? echo "true" : echo "false"
+                echo "$IS_GENERATE"
+                IS_GENERATE ? echo "true" : echo "false"
             }
         }
     }

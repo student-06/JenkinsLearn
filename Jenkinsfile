@@ -23,7 +23,8 @@ pipeline {
                 script {
                     echo "hello"
                     echo "$IS_GENERATE"
-                    if (IS_GENERATE){
+                    
+                    if (IS_GENERATE == true){
                         T()
                     }
                     else{

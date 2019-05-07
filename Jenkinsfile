@@ -21,15 +21,17 @@ pipeline {
             steps {
                 
                 script {
-                    echo "hello"
-                    echo "$IS_GENERATE"
                     
-                    if (IS_GENERATE == "generate"){
-                        T()
-                    }
-                    else{
-                        F()
-                    }
+                    IS_GENERATE == "generate" ? T() : F()
+                    //echo "hello"
+                    //echo "$IS_GENERATE"
+                    
+                    //if (IS_GENERATE == "generate"){
+                    //    T()
+                    //}
+                    //else{
+                    //    F()
+                    //}
                 }
             }
         }

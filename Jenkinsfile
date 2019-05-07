@@ -10,7 +10,7 @@ pipeline {
     agent any
 
     environment{
-        IS_GENERATE=params.isGenerate
+        IS_GENERATE="${params.isGenerate}"
         }
     
     stages {

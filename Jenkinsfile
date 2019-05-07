@@ -1,3 +1,11 @@
+def T(){
+    echo "true misty"
+}
+
+def F(){
+    echo "false misty"
+}
+
 pipeline {
     agent any
 
@@ -11,7 +19,12 @@ pipeline {
             steps {
                 echo "hello"
                 echo "$IS_GENERATE"
-                IS_GENERATE ? echo "true" : echo "false"
+                if (IS_GENERATE){
+                    T()
+                }
+                else{
+                    F()
+                }
             }
         }
     }

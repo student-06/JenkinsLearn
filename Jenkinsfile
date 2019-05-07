@@ -20,7 +20,7 @@ pipeline {
         stage('build') {
             steps {
                 
-                step {
+                script {
                     echo "hello"
                     echo "$IS_GENERATE"
                     if (IS_GENERATE){

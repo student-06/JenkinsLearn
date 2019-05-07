@@ -5,8 +5,10 @@ pipeline {
 
         stage('build') {
             steps {
-                sh "echo hello"
-                sh "echo ${params.paramb}"
+                echo "hello"
+                echo "${params.Paramb}"
+                echo "${params}"
+                
             }
         }
     }

@@ -14,7 +14,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo hello"
-                sh "hi $passed_var"
+                sh "$paramb"
             }
         }
     }

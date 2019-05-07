@@ -24,7 +24,7 @@ pipeline {
                     echo "hello"
                     echo "$IS_GENERATE"
                     
-                    if (IS_GENERATE == true){
+                    if (IS_GENERATE == "generate"){
                         T()
                     }
                     else{

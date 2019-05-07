@@ -14,7 +14,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo hello"
-                sh "$paramb"
+                sh "${params.paramb}"
             }
         }
     }

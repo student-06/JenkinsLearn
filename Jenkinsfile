@@ -6,9 +6,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "hello"
-                echo "${params.Paramb}"
-                echo "${params}"
-                
+                params.isGenerate ? echo "true" : echo "false"
             }
         }
     }

@@ -14,7 +14,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo hello"
-                sh "hi env.passed_var"
+                sh "hi $env.passed_var"
             }
         }
     }

@@ -3,17 +3,11 @@ pipeline {
 
     stages {
 
-    stage('Set environment') {
-            steps {
-                
-            }
-        }
-
-
         stage('build') {
             steps {
                 sh "echo hello pnr"
                 sh "created dev!"
+                echo "$env.CHANGE_ID"
             }
         }
     }

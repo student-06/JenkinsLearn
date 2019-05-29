@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh "echo hello pnr"
                 sh "created dev!"
-                echo "$env.CHANGE_ID"
+                sh "echo $env.CHANGE_ID"
             }
         }
     }

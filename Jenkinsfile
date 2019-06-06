@@ -15,9 +15,9 @@ pipeline {
             steps {
                 sh "echo hello pnr"
                 sh "created dev!"
-                sh "echo env.BRANCH_NAME"
+                //sh "echo env.BRANCH_NAME"
                 sh "echo $env.BRANCH_NAME"
-                sh "echo env.CHANGE_ID"
+                // sh "echo env.CHANGE_ID"
             }
         }
     }

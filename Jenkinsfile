@@ -13,6 +13,7 @@ pipeline {
 
         stage('build') {
             steps {
+                sh 'printenv'
                 echo "hello pnr"
                 echo "created dev!"
                 echo "This branch is: $env.BRANCH_NAME"

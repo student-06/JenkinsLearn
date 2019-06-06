@@ -18,12 +18,25 @@ pipeline {
                 echo "This branch is: $env.BRANCH_NAME"
                 echo "final check for push"
                 script {
+
+
                     if (env.CHANGE_ID){
                         echo "$env.CHANGE_ID";
                     }
                     else{
-                        echo "env.CHANGE_ID does not exists."
+                        echo "env.CHANGE_ID does not exists.";
                     }
+
+                    echo "$env"
+
+                    if (env.BUILD_NUMBER){
+                        echo "$env.BUILD_NUMBER";
+                    }
+                    else{
+                        echo "env.BUILD_NUMBER does not exists.";
+                    }
+
+
                 }
                 // sh "echo env.BRANCH_NAME"
                 // sh "echo $env.BRANCH_NAME"

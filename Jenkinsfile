@@ -9,24 +9,30 @@ def F(){
 pipeline {
     agent any
 
+    environment{
+        IS_GENERATE="${params.isGenerate}"
+        }
+    
     stages {
 
+        
+        
         stage('build') {
             steps {
-                echo "hello pnr"
-                echo "created dev!"
-                echo "This branch is: $env.BRANCH_NAME"
+                
                 script {
-                    if (env.CHANGE_ID){
-                        echo "$env.CHANGE_ID";
-                    }
-                    else{
-                        echo "env.CHANGE_ID does not exists."
-                    }
+                    
+                    IS_GENERATE == "generate" ? T() : F()
+                    //echo "hello"
+                    //echo "$IS_GENERATE"
+                    
+                    //if (IS_GENERATE == "generate"){
+                    //    T()
+                    //}
+                    //else{
+                    //    F()
+                    //}
                 }
-                // sh "echo env.BRANCH_NAME"
-                // sh "echo $env.BRANCH_NAME"
-                // sh "echo env.CHANGE_ID"
             }
         }
     }

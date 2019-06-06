@@ -16,6 +16,7 @@ pipeline {
                 echo "hello pnr"
                 echo "created dev!"
                 echo "This branch is: $env.BRANCH_NAME"
+                echo "final check for push"
                 script {
                     if (env.CHANGE_ID){
                         echo "$env.CHANGE_ID";

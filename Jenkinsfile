@@ -13,10 +13,11 @@ pipeline {
 
         stage('build') {
             steps {
-                sh "echo hello pnr"
-                sh "created dev!"
-                //sh "echo env.BRANCH_NAME"
-                sh "echo $env.BRANCH_NAME"
+                echo "hello pnr"
+                echo "created dev!"
+                echo "This branch is: $env.BRANCH_NAME"
+                // sh "echo env.BRANCH_NAME"
+                // sh "echo $env.BRANCH_NAME"
                 // sh "echo env.CHANGE_ID"
             }
         }

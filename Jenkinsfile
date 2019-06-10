@@ -25,12 +25,12 @@ pipeline {
                 
                 script {
 
-                    if (!IS_PR_RAISED){
-                        echo "pr is raised";
+                    if (IS_PR_RAISED == null){
+                        echo "pr is not raised";
                     }
                     else{
-                        echo "pr is not raised";
-                        echo "$IS_PR_RAISED";
+                        echo "pr is raised";
+                        echo "IS_PR_RAISED: $IS_PR_RAISED";
                     }
 
                     if (!env.CHANGE_ID){

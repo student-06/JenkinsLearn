@@ -8,7 +8,9 @@ def F(){
 
 pipeline {
     agent any
-
+    environment {
+        IS_PR_RAISED="$env.CHANGE_ID"
+    }
     stages {
 
         stage('build') {
@@ -20,9 +22,16 @@ pipeline {
                 echo "created dev!"
                 echo "This branch is: $env.BRANCH_NAME"
                 echo "final check for push"
-                // echo "$env.CHANGE_ID.getClass()"
+                
                 script {
 
+                    if (!IS_PR_RAISED){
+                        echo "pr is raised";
+                    }
+                    else{
+                        echo "pr is not raised";
+                        echo "$IS_PR_RAISED";
+                    }
 
                     if (!env.CHANGE_ID){
                         echo "yes changeid is integer"

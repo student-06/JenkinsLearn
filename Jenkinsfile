@@ -14,6 +14,7 @@ pipeline {
         stage('build') {
             steps {
 		echo "this is dev4"
+		echo "dev4 exclude pr branches and after raising pr"
                 sh 'printenv'
                 echo "hello pnr"
                 echo "created dev!"

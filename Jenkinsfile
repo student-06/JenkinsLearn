@@ -13,8 +13,7 @@ pipeline {
 
         stage('build') {
             steps {
-		echo "this is dev3"
-		echo "this is dev3 after raising the PR ( constructive feedback )"
+		echo "this is dev4"
                 sh 'printenv'
                 echo "hello pnr"
                 echo "created dev!"

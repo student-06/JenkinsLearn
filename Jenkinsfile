@@ -35,11 +35,11 @@ pipeline {
                         echo "IS_PR_RAISED: $IS_PR_RAISED";
                     }
 
-                    if (env.CHANGE_ID == null){
-                        echo "commit based testing";
+                    if (!env.CHANGE_ID){
+                        echo "full testing";
                     }
                     else{
-                        echo "full testing";
+                        echo "commit based testing";
                     }
 
                     if (!env.CHANGE_ID){

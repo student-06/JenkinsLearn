@@ -20,8 +20,13 @@ pipeline {
                 echo "created dev!"
                 echo "This branch is: $env.BRANCH_NAME"
                 echo "final check for push"
+                echo "$env.CHANGE_ID.getClass()"
                 script {
 
+
+                    if (env.CHANGE_ID && env.CHANGE_ID.isInteger()){
+                        echo "yes changeid is integer"
+                    }
 
                     if (env.CHANGE_ID){
                         echo "$env.CHANGE_ID";

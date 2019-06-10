@@ -13,6 +13,7 @@ pipeline {
 
         stage('build') {
             steps {
+		echo "this is dev3"
                 sh 'printenv'
                 echo "hello pnr"
                 echo "created dev!"

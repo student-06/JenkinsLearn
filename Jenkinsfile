@@ -25,7 +25,9 @@ pipeline {
                 
                 script {
 
-                    if (IS_PR_RAISED == null){
+                    echo "outside IS_PR_RAISED: $IS_PR_RAISED";
+
+                    if (IS_PR_RAISED == "null"){
                         echo "pr is not raised";
                     }
                     else{
@@ -33,12 +35,21 @@ pipeline {
                         echo "IS_PR_RAISED: $IS_PR_RAISED";
                     }
 
+                    if (env.CHANGE_ID == null){
+                        echo "commit based testing";
+                    }
+                    else{
+                        echo "full testing";
+                    }
+
                     if (!env.CHANGE_ID){
                         echo "yes changeid is integer"
+                        echo "env.CHANGE_ID $env.CHANGE_ID"
                     }
 
                     if (env.CHANGE_ID){
                         echo "$env.CHANGE_ID";
+                        echo "env.CHANGE_ID $env.CHANGE_ID"
                     }
                     else{
                         echo "env.CHANGE_ID does not exists.";

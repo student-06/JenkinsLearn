@@ -22,6 +22,7 @@ pipeline {
                 echo "created dev!"
                 echo "This branch is: $env.BRANCH_NAME"
                 echo "final check for push"
+                echo "pushed merged now what ????????"
                 
                 script {
 

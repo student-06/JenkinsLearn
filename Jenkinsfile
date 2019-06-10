@@ -24,7 +24,7 @@ pipeline {
                 script {
 
 
-                    if (env.CHANGE_ID && env.CHANGE_ID.isInteger()){
+                    if (!env.CHANGE_ID){
                         echo "yes changeid is integer"
                     }
 

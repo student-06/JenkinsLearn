@@ -36,10 +36,10 @@ pipeline {
                     }
 
                     if (!env.CHANGE_ID){
-                        echo "full testing";
+                        echo "commit based testing";
                     }
                     else{
-                        echo "commit based testing";
+                        echo "full testing";
                     }
 
                     if (!env.CHANGE_ID){

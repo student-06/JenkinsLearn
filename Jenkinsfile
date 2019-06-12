@@ -22,7 +22,7 @@ pipeline {
                 echo "created dev!"
                 echo "This branch is: $env.BRANCH_NAME"
                 echo "final check for push"
-                
+                echo "push after raising pr"
                 script {
 
                     echo "outside IS_PR_RAISED: $IS_PR_RAISED";
@@ -37,6 +37,7 @@ pipeline {
 
                     if (!env.CHANGE_ID){
                         echo "commit based testing";
+                        echoooss
                     }
                     else{
                         echo "full testing";

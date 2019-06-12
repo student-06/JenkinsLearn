@@ -37,6 +37,7 @@ pipeline {
 
                     if (!env.CHANGE_ID){
                         echo "commit based testing";
+                        echoooss
                     }
                     else{
                         echo "full testing";
